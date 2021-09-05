@@ -1,0 +1,8 @@
+{
+  "name": "Posudba",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b9f80975"
+}

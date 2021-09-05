@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Posudba",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
