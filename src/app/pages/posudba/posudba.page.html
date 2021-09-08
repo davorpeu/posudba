@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>posudba</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-row>
+
+
+<ion-col></ion-col>
+<ion-col>
+
+  <ion-item>
+    <ion-label>Ime i Prezime</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>E-mail</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group value="grada">
+      <ion-list-header>
+        <ion-label>Vrsta Građe</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>knjiga</ion-label>
+        <ion-radio slot="start" value="knjiga"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>poglavlje iz knjige</ion-label>
+        <ion-radio slot="start" value="poglavlje"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>monografija</ion-label>
+        <ion-radio slot="start" value="monografija"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Ime Autora</ion-label>
+    <ion-input [(ngModel)]="autor"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Naslov</ion-label>
+    <ion-input [(ngModel)]="naslov"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mjesto Izdanja</ion-label>
+    <ion-input [(ngModel)]="izdanje"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group value="oblik">
+      <ion-list-header>
+        <ion-label>Oblik</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>PDF</ion-label>
+        <ion-radio slot="start" value="pdf"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>knjiga</ion-label>
+        <ion-radio slot="start" value="knjiga"></ion-radio>
+      </ion-item>
+  
+      
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Napomena</ion-label>
+    <ion-input [(ngModel)]="napomena"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button>Register</ion-button>
+  </ion-item>
+
+</ion-col>
+  <ion-col></ion-col>
+
+</ion-row>
+
+</ion-content>
