@@ -5,7 +5,7 @@ import { PosudbaResolverService } from './resolvers/posudba-resolver.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'posudba',
     loadChildren: () => import('./pages/posudba/posudba.module').then( m => m.PosudbaPageModule)
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+
   
   
 ];

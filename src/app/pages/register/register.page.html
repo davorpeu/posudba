@@ -5,5 +5,20 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-label>E-mail</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>password</ion-label>
+    <ion-input [(ngModel)]="password"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-button (click)="register()">Registriraj</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button  [routerLink]="['/login']">Login</ion-button>
+  </ion-item>
 </ion-content>

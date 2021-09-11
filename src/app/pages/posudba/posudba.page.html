@@ -19,11 +19,11 @@
   
   <ion-item>
     <ion-label>E-mail</ion-label>
-    <ion-input [(ngModel)]="email"></ion-input>
+    <ion-input [(ngModel)]="narucitelj"></ion-input>
   </ion-item>
 
   <ion-list>
-    <ion-radio-group value="grada">
+    <ion-radio-group value="">
       <ion-list-header>
         <ion-label>Vrsta Građe</ion-label>
       </ion-list-header>
@@ -37,10 +37,15 @@
         <ion-label>poglavlje iz knjige</ion-label>
         <ion-radio slot="start" value="poglavlje"></ion-radio>
       </ion-item>
-  
+
       <ion-item>
-        <ion-label>monografija</ion-label>
-        <ion-radio slot="start" value="monografija"></ion-radio>
+        <ion-label>doktorska disertacija</ion-label>
+        <ion-radio slot="start" value="doktorska disertacija"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ostalo</ion-label>
+        <ion-radio slot="start" value="ostalo">
+        </ion-radio>
       </ion-item>
     </ion-radio-group>
   </ion-list>
@@ -61,7 +66,7 @@
   </ion-item>
 
   <ion-list>
-    <ion-radio-group value="oblik">
+    <ion-radio-group [(ngModel)]="oblik">
       <ion-list-header>
         <ion-label>Oblik</ion-label>
       </ion-list-header>
@@ -86,7 +91,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-button>Register</ion-button>
+    <ion-button (click)="dodajPosudbu()">Naruči</ion-button>
   </ion-item>
 
 </ion-col>

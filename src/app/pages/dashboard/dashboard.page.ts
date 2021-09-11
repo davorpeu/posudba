@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Posudba } from '../interfaces/posudba';
-import { PosudbaService } from '../services/posudba.service';
+import { Posudba } from 'src/app/interfaces/posudba';
+import { PosudbaService } from 'src/app/services/posudba.service';
 
 
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.page.html',
+  styleUrls: ['./dashboard.page.scss'],
 })
-export class FolderPage implements OnInit {
+export class DashboardPage implements OnInit {
   public folder: string;
 
   constructor(private activatedRoute: ActivatedRoute, private posudbaService: PosudbaService,) { }
