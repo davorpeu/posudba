@@ -65,6 +65,24 @@
     <ion-input [(ngModel)]="izdanje"></ion-input>
   </ion-item>
 
+
+  
+  <ion-item>
+    <ion-label text-wrap>Ukoliko građa nije dostupna u Hrvatskoj, dozvoljavam naručivanje iz inozemstva</ion-label>
+  </ion-item>
+
+ 
+    <ion-radio-group [(ngModel)]="knjiznicaInozemna" allow-empty-selection>
+      <ion-item>
+        <ion-label>Da</ion-label>
+        <ion-radio slot="start" value="da"></ion-radio>
+      </ion-item>
+        
+        
+    </ion-radio-group>
+
+ 
+
   <ion-list>
     <ion-radio-group [(ngModel)]="oblik">
       <ion-list-header>

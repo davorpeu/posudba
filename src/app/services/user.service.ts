@@ -53,6 +53,10 @@ this.router.navigate(['/login']), { replaceUrl: true }
 
   }
 
+  async  logout() {
 
+    this.currentUser.next(null);
+   await this.storageService.removeData("user");
+  }
 
 }

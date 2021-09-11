@@ -3,6 +3,7 @@ import { PosudbaService } from 'src/app/services/posudba.service';
 import { formatDate } from "@angular/common";
 import { defaultMaxListeners } from 'events';
 import { stringify } from '@angular/compiler/src/util';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -12,11 +13,20 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class PosudbaPage implements OnInit {
 
-  constructor(private posudbaService: PosudbaService) {
+  constructor(private posudbaService: PosudbaService, private userService: UserService) {
     // typeof formatDate(this.datum,"medium", "en-GB")
+ 
    }
 
   ngOnInit() {
+    if (this.userService.currentUser.getValue()) {
+      
+    this.status =  this.userService.currentUser.value.status ;
+    } else {
+      this.status = "Anoniman"
+    }
+
+    
   }
 
   private naslov: string = null
@@ -26,15 +36,18 @@ export class PosudbaPage implements OnInit {
   // date = new Date().toUTCString;
   
    datum = JSON.stringify(new Date()).replace(/\"/g, "");
+status: string;
   
+
 
   
   narucitelj: string = null
-  status = "student";
+  // let userId = this.userService.currentUser.value.userId
+  
   // grada = this.naslov + this.autor + this.izdanje
   udk: number = null
   odsjek: string = null
-  knjiznica = "FFOS"
+  knjiznica: string = null
   knjiznicaInozemna: string = null
   oblik: string = null
   napomena: string = null

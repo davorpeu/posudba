@@ -1,5 +1,6 @@
 export interface User {
     redniBroj: number,
     email: string,
-    password: string
+    password: string,
+    status: string
 }
